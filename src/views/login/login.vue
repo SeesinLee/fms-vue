@@ -149,7 +149,12 @@ export default {
         })
       })
     }
-  }
+  },
+  created: [
+    function () {
+      localStorage.clear()
+    }
+  ]
 }
 </script>
 <style lang="scss" scoped>
