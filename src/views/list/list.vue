@@ -221,12 +221,11 @@ export default {
   created: [
     function () {
       showLoading()
-      this.pageNow = Number(localStorage.getItem('pagination')) || 1
+      this.pageNow = Number(localStorage.getItem('pagination'))
       this.pageChange(this.pageNow)
       this.userPower = JSON.parse(localStorage.getItem('ginessential_user_info')).data.group
       listService.getFaultLists().then((response) => {
         var a = response.data
-        this.fualtList = a.data.data
         this.page = a.data.total
         hideLoading()
       }).catch((err) => {
