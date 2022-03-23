@@ -182,7 +182,6 @@ export default {
           }
         })
       }).catch((err) => {
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,
@@ -197,7 +196,6 @@ export default {
     },
     handleConfirmEdit () {
       this.groupEdit.oldName = this.oldName
-      console.log(this.groupEdit)
       groupService.groupUpdate(this.groupEdit).then((response) => {
         this.$notify({
           title: '数据修改成功',
@@ -209,7 +207,6 @@ export default {
           }
         })
       }).catch((err) => {
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,
@@ -219,7 +216,6 @@ export default {
       this.dialogVisible = false
     },
     handleDelete (row) {
-      console.log(row.group)
       this.userGroup.groupName = row.group
       groupService.groupDelete(this.userGroup).then((response) => {
         this.$notify({
@@ -232,7 +228,6 @@ export default {
           }
         })
       }).catch((err) => {
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,

@@ -185,7 +185,6 @@ export default {
           this.fualtList = a.data.data
         })
       }).catch((err) => {
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,

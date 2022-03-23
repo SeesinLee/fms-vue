@@ -191,7 +191,6 @@ export default {
         this.formVisible = false
       }).catch((err) => {
         hideLoading()
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,
@@ -210,7 +209,6 @@ export default {
       showLoading()
       this.userGroup.username = this.dialogName
       this.userGroup.group = this.value
-      console.log(this.userGroup)
       groupService.adminEdit(this.userGroup).then((response) => {
         this.$notify({
           title: '数据修改成功',
@@ -224,7 +222,6 @@ export default {
         })
       }).catch((err) => {
         hideLoading()
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,
@@ -248,7 +245,6 @@ export default {
         })
       }).catch((err) => {
         hideLoading()
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,
@@ -267,7 +263,6 @@ export default {
         }
         groupService.groups().then((response) => {
           hideLoading()
-          console.log(response.data.msg)
           this.groupNames = response.data.data.data
         })
       }).catch((err) => {

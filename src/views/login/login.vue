@@ -134,7 +134,6 @@ export default {
           })
         }).catch((err) => {
           hideLoading()
-          console.log('err:', err.response.data.msg)
           this.$notify.error({
             title: '数据验证错误',
             showClose: false,
@@ -143,7 +142,6 @@ export default {
         })
       }).catch((err) => {
         hideLoading()
-        console.log('err:', err.response.data.msg)
         this.$notify.error({
           title: '数据验证错误',
           showClose: false,
